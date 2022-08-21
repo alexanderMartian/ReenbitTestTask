@@ -51,11 +51,11 @@ const CurrentChatContainer = () => {
 
   const handleBack = () => dispatch(hideChat());
   const handleSend = () => {
-    dispatch(addMessage(inputValue));
     setInputValue("");
+    dispatch(addMessage(inputValue));
     setTimeout(() => {
-      dispatch(getJoke());
-    }, 15000);
+      dispatch(getJoke(currentID));
+    }, 10000);
   }
 
   if (isActive) {

@@ -11,11 +11,11 @@ const initialState = {
   currentID: 0,
 };
 
-export const getJoke = createAsyncThunk('cart/get', async () => {
+export const getJoke = createAsyncThunk('cart/get', async (item) => {
     try {
       const url = "https://api.chucknorris.io/jokes/random";
       const result =  await axios.get(url);
-      return result.data.value
+      return [result.data.value, item]
     } catch (e) {
       console.error(e, "Some problems with request");
     }
@@ -63,8 +63,8 @@ const chatSlice = createSlice({
         }
       }
       state.allChatsHistory.map( item => {
-        if (item.id === state.currentID) {
-          item.messages.unshift(createMessage(action.payload));
+        if (item.id === action.payload[1]) {
+          item.messages.unshift(createMessage(action.payload[0]));
         }
       })
       localStorage.setItem("allChatsHistory", JSON.stringify(state.allChatsHistory));
