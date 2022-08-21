@@ -1,0 +1,13 @@
+@import '../../styles/variables.module';
+
+@media (min-width: $tablet) {
+  .leftSide {
+    max-width: 50%;
+  }
+}
+
+@media (min-width: $desktop) {
+  .leftSide {
+    min-width: 50%;
+  }
+}

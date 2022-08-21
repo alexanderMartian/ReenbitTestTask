@@ -1,0 +1,48 @@
+.searchBar {
+  border: 1px solid #DCDCDC;
+  color: black;
+  border-radius: 15px;
+  background-color: #F8F8F8;
+  outline: none;
+  &:focus {
+    border-color: royalblue;
+  }
+}
+
+.searchBox > input {
+  padding: 7px 10px;
+  min-width: 100%;
+}
+.searchBox > input::placeholder {
+  padding-left: 20px;
+  background: url(../ChatsHeader/svg/search.svg) no-repeat;
+}
+
+.contacts {
+  & > h3 {
+    margin: 25px;
+  }
+}
+
+.messages {
+  @extend .contacts;
+}
+
+.noMatch {
+  display: flex;
+  justify-content: center;
+  margin-top: 30%;
+}
+
+//@media (min-width: $tablet-max) {
+//  .searchBar {
+//    border: 1px solid $details;
+//    color: $base-yellow;
+//    background-color: transparent;
+//    border-radius: 15px;
+//  }
+//
+//  .searchBar:hover {
+//    border: 1px solid $base-yellow;
+//  }
+//}

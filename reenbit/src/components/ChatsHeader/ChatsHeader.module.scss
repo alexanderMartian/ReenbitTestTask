@@ -1,0 +1,49 @@
+@import '../../styles/variables.module';
+
+.container {
+  padding: 25px 20px;
+  background-color: $grayBackground;
+  border-bottom: 1px solid #DCDCDC;
+  border-right: 1px solid #DCDCDC;
+}
+
+.checkedContainer {
+  position: absolute;
+  top: 36px;
+  left: 36px;
+  & > * {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.logoItem {
+  display: flex;
+  justify-content: start;
+  margin-bottom: 30px;
+  position: relative;
+  & > *{
+    width: 55px;
+    height: 55px;
+  }
+}
+
+.searchBar {
+  border: 1px solid #DCDCDC;
+  color: $black;
+  border-radius: 15px;
+  background-color: $grayBackground;
+  outline: none;
+  &:focus {
+    border-color: royalblue;
+  }
+}
+
+.searchBox > input {
+  padding: 7px 10px;
+  min-width: 100%;
+}
+.searchBox > input::placeholder {
+  padding-left: 20px;
+  background: url(svg/search.svg) no-repeat;
+}

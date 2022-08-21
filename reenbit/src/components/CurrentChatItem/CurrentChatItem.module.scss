@@ -1,0 +1,50 @@
+@import '../../styles/variables.module';
+
+.imgWrapper {
+  & > * {
+    width: 65px;
+    height: 65px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+}
+
+.notYourMessage {
+  display: flex;
+  flex-direction: column;
+  word-wrap: break-word;
+  margin-left: 10px;
+  line-height: 16px;
+  max-width: 60%;
+  & > p:first-child {
+    border-radius: 30px;
+    padding: 12px 15px;
+    background-color: midnightblue;
+    color: $white;
+    margin-bottom: 5px;
+    font-size: 15px;
+  }
+  & > p:last-child {
+    font-size: 10px;
+  }
+}
+
+.yourMessage {
+  @extend .notYourMessage;
+  align-items: end;
+  & > p:first-child {
+    background-color: #E8E8E8;
+    color: $black;
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: start;
+  margin-bottom: 30px;
+}
+
+.containerYourMessage {
+ @extend .container;
+  justify-content: end;
+}
