@@ -80,6 +80,7 @@
   padding: 20px;
   position: absolute;
   bottom: 0;
+  top: calc(100% - 80px);
   width: 100%;
   border-radius: 20px;
   & > input {
